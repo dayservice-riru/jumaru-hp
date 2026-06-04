@@ -1,0 +1,2443 @@
+:root {
+  --ivory: #fbf7ee;
+  --soft-ivory: #fffaf1;
+  --beige: #e9dcc8;
+  --sand: #d8c2a3;
+  --wood: #9e6f45;
+  --wood-dark: #6d4a32;
+  --sage: #75856f;
+  --sage-dark: #53664f;
+  --terracotta: #b97855;
+  --ink: #342c25;
+  --muted: #756a60;
+  --white: #fffdf8;
+  --shadow: 0 18px 44px rgba(82, 61, 41, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: var(--ivory);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family:
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
+    system-ui,
+    sans-serif;
+  line-height: 1.85;
+  letter-spacing: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 241, 0.96), rgba(249, 241, 229, 0.98)),
+    var(--ivory);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+dd,
+li {
+  overflow-wrap: anywhere;
+}
+
+.service-card,
+.feature,
+.flow-list li,
+.detail-card,
+.activity-info-card,
+.schedule-card,
+.guide-list div,
+.gallery-card,
+.staff-card,
+.price-panel,
+.contact-panel,
+.map-panel,
+.business-card,
+.for-you-card {
+  min-width: 0;
+}
+
+.site {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 88svh;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 76px;
+  background:
+    linear-gradient(142deg, rgba(255, 253, 248, 0.9), rgba(242, 226, 204, 0.74)),
+    var(--soft-ivory);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: auto -24px -52px auto;
+  width: 190px;
+  height: 260px;
+  border-radius: 999px 999px 0 0;
+  background:
+    linear-gradient(90deg, rgba(109, 74, 50, 0.12), transparent 18% 25%, rgba(109, 74, 50, 0.08) 28% 31%, transparent 33%),
+    linear-gradient(180deg, #c49a6e, #a8754c);
+  opacity: 0.68;
+  transform: rotate(18deg);
+}
+
+.hero__grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(109, 74, 50, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 74, 50, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(180deg, #000 0 70%, transparent);
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 6px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  min-height: 58px;
+  padding: 4px 0;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  display: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 940px);
+  margin: auto auto 0;
+  padding-top: 84px;
+}
+
+.hero__label,
+.section-heading__sub,
+.service-card__category {
+  margin: 0;
+  color: var(--wood);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin: 15px 0 18px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(2.28rem, 12vw, 5.8rem);
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.hero__copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 4.25vw, 1.22rem);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: clamp(2rem, 9vw, 2.45rem);
+  }
+
+  .top-contact-card {
+    padding: 22px 20px;
+  }
+
+  .top-contact-actions {
+    gap: 10px;
+    padding-top: 16px;
+  }
+
+  .top-contact-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .riru-intro-panel {
+    gap: 14px;
+  }
+
+  .riru-intro-illustration {
+    max-width: 320px;
+  }
+
+  .riru-service-tags {
+    gap: 8px;
+  }
+
+  .riru-service-tags li {
+    padding: 7px 11px;
+    font-size: 0.82rem;
+  }
+
+  .detail-page h2,
+  .detail-page p,
+  .detail-page dd,
+  .detail-page li {
+    line-break: anywhere;
+  }
+
+  .detail-page h2 {
+    font-size: clamp(1.5rem, 6.4vw, 1.75rem);
+    line-height: 1.45;
+  }
+
+  .detail-page p,
+  .detail-page dd,
+  .detail-page li {
+    word-break: break-all;
+  }
+
+  .airu-page p,
+  .airu-page dd,
+  .airu-page li {
+    overflow-wrap: break-word;
+    word-break: normal;
+    line-break: strict;
+  }
+}
+
+.services,
+.about,
+.company,
+.business,
+.for-you,
+.flow {
+  position: relative;
+  z-index: 2;
+  padding: 62px 20px 84px;
+}
+
+.services {
+  background: linear-gradient(180deg, var(--ivory), #f3eadc);
+}
+
+.about {
+  background: var(--white);
+}
+
+.company {
+  background: linear-gradient(180deg, var(--white), #fff8f4);
+}
+
+.business {
+  background: linear-gradient(180deg, #fff8f4, #f3eadc);
+}
+
+.for-you {
+  background: var(--white);
+}
+
+.flow {
+  background: #eef0e8;
+}
+
+.section-heading,
+.about__inner,
+.company__inner,
+.business-list,
+.for-you-list,
+.flow-list,
+.contact__inner {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+}
+
+.section-heading {
+  margin-bottom: 26px;
+}
+
+.services__lead {
+  max-width: 640px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 3.6vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.section-heading--center {
+  text-align: center;
+}
+
+.section-heading h2,
+.about h2,
+.company h2,
+.business h2,
+.for-you h2,
+.flow h2,
+.contact h2 {
+  margin: 5px 0 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  line-height: 1.35;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+.service-card,
+.feature,
+.flow-list li {
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.7), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 253, 248, 0.22));
+}
+
+.service-card--care {
+  background: linear-gradient(145deg, #fff9f6, #f8e2e6);
+}
+
+.service-card--day {
+  background: linear-gradient(145deg, #fbfff8, #e5f0dc);
+}
+
+.service-card__media {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.service-card--care .service-card__media {
+  background-color: transparent;
+}
+
+.service-card--day .service-card__media {
+  background-color: transparent;
+}
+
+.service-card__logo {
+  display: block;
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0 8px 14px rgba(82, 61, 41, 0.12));
+  opacity: 0.9;
+}
+
+.service-card__logo--airu {
+  max-width: 86px;
+}
+
+.service-card__logo--riru {
+  max-width: 94px;
+  max-height: 64px;
+  transform: translateY(-5px);
+}
+
+.service-card__body {
+  position: relative;
+  z-index: 1;
+  padding: 92px 24px 28px;
+}
+
+.service-card h3,
+.feature h3,
+.flow-list h3 {
+  margin: 6px 0 13px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.56rem;
+  line-height: 1.35;
+}
+
+.service-card h3 {
+  margin-top: 8px;
+  margin-bottom: 18px;
+  color: var(--ink);
+  font-size: clamp(1.75rem, 8vw, 2.36rem);
+}
+
+.service-card p,
+.about p,
+.feature p,
+.flow-list p,
+.contact p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  margin-top: 6px;
+  padding: 12px 18px 12px 20px;
+  border-radius: 999px;
+  color: var(--soft-ivory);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--wood-dark);
+  box-shadow: 0 12px 24px rgba(109, 74, 50, 0.18);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.button span {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--sage-dark);
+}
+
+.about__inner {
+  display: grid;
+  gap: 34px;
+}
+
+.company__inner {
+  display: grid;
+  gap: 28px;
+}
+
+.about__content p {
+  max-width: 680px;
+  margin-top: 18px;
+}
+
+.company__content p {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+
+.company-info {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.company-info div {
+  padding: 18px 20px;
+  border: 1px solid rgba(158, 111, 69, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.86);
+}
+
+.company-info dt {
+  color: var(--wood);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.company-info dd {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.business-list,
+.for-you-list {
+  display: grid;
+  gap: 16px;
+}
+
+.business-card,
+.for-you-card {
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.business-card {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 24px;
+}
+
+.business-card::after {
+  position: absolute;
+  right: -36px;
+  bottom: -46px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  content: "";
+  background: rgba(246, 220, 225, 0.36);
+}
+
+.business-card--riru::after {
+  background: rgba(223, 234, 214, 0.54);
+}
+
+.business-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.business-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.business-card a {
+  position: relative;
+  z-index: 1;
+  color: var(--wood-dark);
+  font-weight: 800;
+}
+
+.for-you-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 20px;
+}
+
+.for-you-card span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 800;
+  background: var(--sage-dark);
+}
+
+.for-you-card p {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.feature-list {
+  display: grid;
+  gap: 16px;
+}
+
+.feature {
+  padding: 24px 22px;
+}
+
+.feature__number {
+  color: var(--terracotta);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.feature h3 {
+  font-size: 1.28rem;
+}
+
+.flow-list {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-list li {
+  padding: 26px 22px 24px;
+}
+
+.flow-list span {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: 800;
+  background: var(--sage-dark);
+}
+
+.flow-list h3 {
+  font-size: 1.26rem;
+}
+
+.contact {
+  padding: 70px 20px;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(83, 102, 79, 0.94), rgba(109, 74, 50, 0.92)),
+    var(--sage-dark);
+}
+
+.contact .section-heading__sub,
+.contact p {
+  color: rgba(255, 253, 248, 0.82);
+}
+
+.contact p {
+  max-width: 720px;
+  margin-top: 18px;
+}
+
+.top-contact-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.top-contact-card,
+.top-access {
+  border: 1px solid rgba(255, 253, 248, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.94);
+  box-shadow: 0 18px 40px rgba(52, 44, 37, 0.14);
+}
+
+.top-contact-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px;
+}
+
+.top-contact-card__label {
+  margin: 0 0 4px;
+  color: var(--wood);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.top-contact-card h3,
+.top-access h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.42rem;
+}
+
+.top-contact-card dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.top-contact-card dt {
+  color: var(--wood);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.top-contact-card dd {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.top-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.top-contact-card .button--light {
+  min-height: 46px;
+  color: var(--white);
+  background: var(--sage-dark);
+}
+
+.top-access {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 24px 22px;
+}
+
+.top-access p {
+  color: var(--muted);
+}
+
+.map-button--light {
+  background: var(--wood-dark);
+}
+
+.map-embed--top {
+  margin-top: 0;
+}
+
+.button--light {
+  color: var(--wood-dark);
+  background: var(--white);
+}
+
+.button--light:hover {
+  color: var(--white);
+  background: var(--terracotta);
+}
+
+@media (min-width: 760px) {
+  .hero {
+    min-height: 82vh;
+    padding: 28px 48px 86px;
+  }
+
+  .hero::before {
+    width: 270px;
+    height: 360px;
+    right: 8vw;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+
+  .nav a {
+    transition: color 160ms ease;
+  }
+
+  .nav a:hover {
+    color: var(--wood-dark);
+  }
+
+  .services,
+  .about,
+  .company,
+  .business,
+  .for-you,
+  .flow {
+    padding: 84px 48px 108px;
+  }
+
+  .contact {
+    padding: 92px 48px;
+  }
+
+  .service-list,
+  .feature-list,
+  .flow-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .service-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 430px;
+  }
+
+  .service-card__media {
+    top: 34px;
+    right: 34px;
+    width: 102px;
+  }
+
+  .logo {
+    width: 170px;
+    min-height: 68px;
+  }
+
+  .service-card__logo {
+    max-width: 96px;
+    max-height: 61px;
+    padding: 0;
+  }
+
+  .service-card__logo--airu {
+    max-width: 102px;
+  }
+
+  .service-card__logo--riru {
+    max-width: 112px;
+    max-height: 72px;
+    transform: translateY(-6px);
+  }
+
+  .service-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 112px 36px 36px;
+  }
+
+  .service-card .button {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  .about__inner {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+  }
+
+  .company__inner {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+  }
+
+  .company-info {
+    grid-template-columns: 1fr;
+  }
+
+  .business-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .for-you-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .for-you-card {
+    grid-template-columns: 1fr;
+    align-content: start;
+    min-height: 150px;
+  }
+
+  .top-contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .top-access {
+    grid-template-columns: 0.78fr 1.22fr;
+    align-items: center;
+  }
+}
+
+.detail-page {
+  background: var(--ivory);
+}
+
+.detail-hero {
+  position: relative;
+  min-height: 74svh;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 70px;
+  background:
+    linear-gradient(145deg, rgba(255, 253, 248, 0.92), rgba(249, 226, 230, 0.78)),
+    var(--soft-ivory);
+}
+
+.detail-hero::before {
+  position: absolute;
+  right: -64px;
+  bottom: -84px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  content: "";
+  background: rgba(246, 220, 225, 0.72);
+}
+
+.detail-hero--riru {
+  background:
+    linear-gradient(145deg, rgba(255, 253, 248, 0.92), rgba(226, 238, 214, 0.82)),
+    var(--soft-ivory);
+}
+
+.detail-hero--riru::before {
+  background: rgba(223, 234, 214, 0.78);
+}
+
+.detail-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 42px;
+  width: min(100%, 1040px);
+  margin: auto auto 0;
+  padding-top: 72px;
+}
+
+.detail-hero__title {
+  margin: 14px 0 10px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(2.52rem, 13vw, 5.6rem);
+  line-height: 1.16;
+}
+
+.detail-hero__title span {
+  display: inline;
+}
+
+.riru-page .detail-hero__title {
+  width: fit-content;
+  max-width: 100%;
+  font-size: clamp(2.18rem, 10.4vw, 5.2rem);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .detail-hero__title,
+  .riru-page .detail-hero__title {
+    width: auto;
+    font-size: clamp(2.48rem, 11vw, 3.1rem);
+    white-space: normal;
+  }
+
+  .detail-hero__title span {
+    display: block;
+  }
+}
+
+.detail-hero__lead {
+  margin: 0 0 22px;
+  color: var(--wood-dark);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.5rem, 6.4vw, 2.7rem);
+  line-height: 1.48;
+}
+
+.detail-hero__copy {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 4vw, 1.12rem);
+  font-weight: 500;
+}
+
+.detail-hero__mark {
+  display: grid;
+  width: min(62vw, 240px);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: start;
+  border-radius: 50%;
+  background: rgba(255, 253, 248, 0.36);
+}
+
+.detail-hero__mark img {
+  width: 76%;
+  height: auto;
+  filter: drop-shadow(0 16px 28px rgba(82, 61, 41, 0.1));
+}
+
+.detail-hero__mark--riru img {
+  width: 82%;
+}
+
+.detail-intro,
+.detail-services,
+.area-section,
+.detail-contact {
+  padding: 66px 20px 84px;
+}
+
+.detail-intro {
+  background: var(--white);
+}
+
+.detail-intro__inner,
+.area-section__inner,
+.detail-contact__inner {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+}
+
+.detail-intro__inner {
+  display: grid;
+  gap: 24px;
+}
+
+.detail-intro h2,
+.area-section h2,
+.detail-contact h2 {
+  margin: 5px 0 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.75rem, 7.2vw, 3rem);
+  line-height: 1.36;
+}
+
+.detail-intro p,
+.detail-card li,
+.area-list li,
+.detail-contact p,
+.contact-list dd {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.detail-intro__inner > p {
+  margin: 0;
+}
+
+.riru-intro-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.riru-intro-panel p {
+  margin: 0;
+}
+
+.riru-intro-illustration {
+  max-width: 380px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.riru-intro-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.riru-intro-note {
+  padding: 14px 16px;
+  border-left: 4px solid rgba(117, 133, 111, 0.62);
+  border-radius: 0 8px 8px 0;
+  background: rgba(237, 244, 223, 0.72);
+}
+
+.riru-service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.riru-service-tags li {
+  padding: 8px 13px;
+  border: 1px solid rgba(117, 133, 111, 0.2);
+  border-radius: 999px;
+  color: var(--sage-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+  background: rgba(255, 253, 248, 0.84);
+  box-shadow: 0 8px 18px rgba(82, 61, 41, 0.06);
+}
+
+.detail-services {
+  background: linear-gradient(180deg, #fff7f3, #f3eadc);
+}
+
+.detail-services--riru {
+  background: linear-gradient(180deg, #f8fbf2, #eef3e4);
+}
+
+.detail-card-list {
+  display: grid;
+  gap: 18px;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+.detail-card {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 24px 26px;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.detail-card::after {
+  position: absolute;
+  right: -32px;
+  bottom: -46px;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  content: "";
+  background: rgba(246, 220, 225, 0.42);
+}
+
+.detail-card__icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #f4cfd7;
+  box-shadow: inset 0 0 0 10px rgba(255, 253, 248, 0.42);
+}
+
+.detail-card__icon--welfare {
+  background: #e8c5cf;
+}
+
+.detail-card__icon--private {
+  background: #dcc5aa;
+}
+
+.riru-icon {
+  background: #d9e8c6;
+}
+
+.riru-icon--smile {
+  background: #c9dfbd;
+}
+
+.riru-icon--coin {
+  background: #efe2a6;
+}
+
+.riru-icon--training {
+  background: #bfd8b4;
+}
+
+.detail-card__label {
+  margin: 0 0 4px;
+  color: var(--wood);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.detail-card h3 {
+  margin: 0 0 16px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.45rem;
+  line-height: 1.36;
+}
+
+.detail-card ul,
+.area-list,
+.contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-card li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.detail-card li::before {
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  content: "";
+  background: var(--terracotta);
+}
+
+.area-section {
+  background: var(--white);
+}
+
+.area-section__inner {
+  display: grid;
+  gap: 28px;
+}
+
+.area-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.area-list li {
+  display: grid;
+  min-height: 58px;
+  place-items: center;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 700;
+  background: #fff8f4;
+}
+
+.detail-contact {
+  background:
+    linear-gradient(135deg, rgba(109, 74, 50, 0.92), rgba(185, 120, 85, 0.86)),
+    var(--wood-dark);
+}
+
+.detail-contact--riru {
+  background:
+    linear-gradient(135deg, rgba(83, 102, 79, 0.94), rgba(124, 138, 106, 0.9)),
+    var(--sage-dark);
+}
+
+.detail-contact__inner {
+  display: grid;
+  gap: 28px;
+}
+
+.detail-contact .section-heading__sub,
+.detail-contact h2,
+.detail-contact p {
+  color: var(--white);
+}
+
+.detail-contact p {
+  margin: 18px 0 0;
+  color: rgba(255, 253, 248, 0.82);
+}
+
+.contact-panel {
+  padding: 26px 24px;
+  border: 1px solid rgba(255, 253, 248, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.94);
+  box-shadow: 0 22px 54px rgba(52, 44, 37, 0.16);
+}
+
+.contact-list {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contact-list div {
+  display: grid;
+  gap: 4px;
+}
+
+.contact-list dt {
+  color: var(--wood);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.contact-list dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.recruit-summary,
+.recruit-detail-section,
+.recruit-message-section,
+.recruit-welcome-section,
+.recruit-link-section {
+  padding: 66px 20px 84px;
+}
+
+.recruit-summary,
+.recruit-welcome-section {
+  background: var(--white);
+}
+
+.recruit-detail-section,
+.recruit-link-section {
+  background: linear-gradient(180deg, #fff7f3, #f3eadc);
+}
+
+.recruit-message-section {
+  background: var(--ivory);
+}
+
+.recruit-summary-card,
+.recruit-grid,
+.recruit-message-inner,
+.recruit-welcome-list,
+.recruit-link-card {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+}
+
+.recruit-summary-card,
+.recruit-card,
+.recruit-message-panel,
+.recruit-link-card {
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.recruit-summary-card {
+  padding: 30px 26px;
+  text-align: center;
+}
+
+.recruit-summary-card--inline {
+  margin-bottom: 24px;
+}
+
+.recruit-summary-card__label,
+.recruit-card__note {
+  margin: 0 0 6px;
+  color: var(--wood);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.recruit-summary-card h3,
+.recruit-card h3,
+.recruit-message-section h2,
+.recruit-link-card h2 {
+  margin: 0 0 14px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  line-height: 1.38;
+}
+
+.recruit-summary-card h3 {
+  font-size: clamp(1.7rem, 7vw, 2.6rem);
+}
+
+.recruit-summary-card p,
+.recruit-card p,
+.recruit-message-panel p,
+.recruit-link-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.recruit-summary-card p + p {
+  margin-top: 10px;
+}
+
+.recruit-feeling-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recruit-feeling-list li {
+  padding: 8px 13px;
+  border: 1px solid rgba(185, 120, 85, 0.18);
+  border-radius: 999px;
+  color: var(--wood-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+  background: rgba(246, 220, 225, 0.38);
+}
+
+.recruit-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.recruit-card {
+  padding: 26px 24px;
+}
+
+.recruit-card h3 {
+  color: var(--ink);
+  font-size: 1.42rem;
+}
+
+.recruit-card ul,
+.recruit-welcome-list,
+.recruit-pay-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recruit-pay-list {
+  display: grid;
+  gap: 12px;
+}
+
+.recruit-pay-list div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid rgba(158, 111, 69, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.74);
+}
+
+.recruit-pay-list dt {
+  color: var(--wood);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.recruit-pay-list dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.recruit-card li,
+.recruit-welcome-list li {
+  position: relative;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.recruit-card li {
+  padding-left: 18px;
+}
+
+.recruit-card li::before {
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  content: "";
+  background: var(--terracotta);
+}
+
+.recruit-card--editable {
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.9), rgba(246, 220, 225, 0.36)),
+    var(--white);
+}
+
+.recruit-card__note {
+  margin-top: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.recruit-message-inner {
+  display: grid;
+  gap: 22px;
+}
+
+.recruit-message-panel {
+  display: grid;
+  gap: 12px;
+  padding: 26px 24px;
+}
+
+.recruit-message-inner--inline {
+  margin-top: 34px;
+}
+
+.recruit-welcome-heading {
+  margin-top: 46px;
+}
+
+.recruit-welcome-list {
+  display: grid;
+  gap: 12px;
+}
+
+.recruit-welcome-list li {
+  display: grid;
+  min-height: 58px;
+  align-items: center;
+  padding: 14px 18px 14px 42px;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: #fff8f4;
+}
+
+.recruit-welcome-list li::before {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  content: "";
+  background: #f4cfd7;
+  transform: translateY(-50%);
+}
+
+.recruit-link-card {
+  display: grid;
+  gap: 20px;
+  padding: 28px 24px;
+}
+
+.recruit-link-card h2 {
+  font-size: clamp(1.55rem, 6vw, 2.35rem);
+}
+
+.recruit-apply-card {
+  display: grid;
+  gap: 18px;
+  width: min(100%, 1040px);
+  margin: 30px auto 0;
+  padding: 26px 24px;
+  border: 1px solid rgba(158, 111, 69, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.94), rgba(246, 220, 225, 0.36)),
+    var(--white);
+  box-shadow: var(--shadow);
+}
+
+.recruit-apply-card h3 {
+  margin: 0 0 10px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.45rem;
+}
+
+.recruit-apply-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.public-info-section {
+  padding: 66px 20px 84px;
+  background: var(--white);
+}
+
+.public-info-card {
+  display: grid;
+  gap: 18px;
+  width: min(100%, 1040px);
+  margin-inline: auto;
+  padding: 28px 24px;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.94), rgba(246, 220, 225, 0.3)),
+    var(--white);
+  box-shadow: var(--shadow);
+}
+
+.public-info-card h2 {
+  margin: 0 0 12px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.55rem, 6vw, 2.35rem);
+  line-height: 1.38;
+}
+
+.public-info-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.public-info-card .button {
+  justify-content: center;
+}
+
+.public-info-note {
+  font-size: 0.88rem;
+}
+
+@media (min-width: 760px) {
+  .detail-hero {
+    min-height: 76vh;
+    padding: 28px 48px 86px;
+  }
+
+  .detail-hero::before {
+    right: 7vw;
+    bottom: -118px;
+    width: 360px;
+    height: 360px;
+  }
+
+  .detail-hero__inner {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    align-items: end;
+    padding-top: 94px;
+  }
+
+  .detail-hero__mark {
+    width: 300px;
+    justify-self: end;
+  }
+
+  .detail-intro,
+  .detail-services,
+  .area-section,
+  .detail-contact {
+    padding: 88px 48px 108px;
+  }
+
+  .detail-intro__inner,
+  .area-section__inner,
+  .detail-contact__inner {
+    grid-template-columns: 0.86fr 1.14fr;
+    align-items: center;
+  }
+
+  .riru-intro-panel {
+    gap: 18px;
+  }
+
+  .detail-card-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .detail-card {
+    padding: 34px 30px 32px;
+  }
+
+  .area-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .contact-panel {
+    padding: 34px;
+  }
+
+  .recruit-summary,
+  .recruit-detail-section,
+  .recruit-message-section,
+  .recruit-welcome-section,
+  .recruit-link-section {
+    padding: 88px 48px 108px;
+  }
+
+  .recruit-summary-card {
+    padding: 38px 44px;
+  }
+
+  .recruit-summary-card--inline {
+    margin-bottom: 28px;
+  }
+
+  .recruit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .recruit-card--editable {
+    grid-column: 1 / -1;
+  }
+
+  .recruit-message-inner {
+    grid-template-columns: 0.86fr 1.14fr;
+    align-items: center;
+  }
+
+  .recruit-welcome-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recruit-link-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 34px 36px;
+  }
+
+  .recruit-apply-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 32px 34px;
+  }
+
+  .public-info-section {
+    padding: 88px 48px 108px;
+  }
+
+  .public-info-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 32px 34px;
+  }
+
+  .public-info-note {
+    grid-column: 1 / -1;
+  }
+}
+
+.riru-feature-grid,
+.activity-info-grid,
+.gallery-grid,
+.schedule-grid,
+.guide-section__inner {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+}
+
+.riru-feature-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.riru-feature-card p:last-child {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted);
+}
+
+.activity-section,
+.schedule-section,
+.guide-section,
+.gallery-section {
+  padding: 66px 20px 84px;
+}
+
+.activity-section {
+  background: var(--white);
+}
+
+.activity-info-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.activity-info-card,
+.gallery-card,
+.staff-card {
+  overflow: hidden;
+  border: 1px solid rgba(158, 111, 69, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.activity-info-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 24px 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.82), rgba(248, 251, 242, 0.9)),
+    #fbfff8;
+}
+
+.activity-info-card__icon {
+  position: relative;
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border: 1px solid rgba(158, 111, 69, 0.1);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.5), transparent 58%),
+    #e5f0dc;
+  box-shadow: inset 0 0 0 8px rgba(255, 253, 248, 0.3);
+}
+
+.activity-info-card__icon::after {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  content: "";
+  background: rgba(117, 133, 111, 0.26);
+}
+
+.activity-info-card__icon svg {
+  width: 34px;
+  height: 34px;
+  color: var(--sage-dark);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gallery-card__media {
+  display: grid;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.44), transparent 52%),
+    #e5f0dc;
+}
+
+.gallery-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.gallery-card__media--pachinko-photo img {
+  object-position: center bottom;
+}
+
+.gallery-card__media--bike-photo img {
+  object-position: center bottom;
+}
+
+.gallery-card:hover .gallery-card__media img {
+  transform: scale(1.035);
+}
+
+.gallery-card__media span {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--sage-dark);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  background: rgba(255, 253, 248, 0.58);
+  box-shadow: 0 12px 28px rgba(82, 61, 41, 0.08);
+}
+
+.activity-info-card__icon--mahjong,
+.gallery-card__media--mahjong {
+  background-color: #e5f0dc;
+}
+
+.activity-info-card__icon--hiragana,
+.gallery-card__media--hiragana {
+  background-color: #edf4df;
+}
+
+.activity-info-card__icon--pachinko,
+.gallery-card__media--pachinko {
+  background-color: #efe2a6;
+}
+
+.activity-info-card__icon--bike,
+.gallery-card__media--bike {
+  background-color: #d9e8c6;
+}
+
+.activity-info-card__icon--othello,
+.activity-info-card__icon--brain {
+  background-color: #edf4df;
+}
+
+.activity-info-card__icon--shogi,
+.activity-info-card__icon--soroban {
+  background-color: #f0eadb;
+}
+
+.activity-info-card__icon--theraband,
+.activity-info-card__icon--movie {
+  background-color: #dcebd6;
+}
+
+.gallery-card__media--theraband,
+.gallery-card__media--movie {
+  background-color: #dcebd6;
+}
+
+.gallery-card__media--room {
+  background-color: #f0eadb;
+}
+
+.activity-info-card h3 {
+  margin: 0 0 8px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.22rem;
+  line-height: 1.34;
+}
+
+.activity-info-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.schedule-section {
+  background: linear-gradient(180deg, #f8fbf2, #f3eadc);
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.schedule-card {
+  padding: 26px 22px;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.schedule-card h3 {
+  margin: 0 0 20px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.48rem;
+  line-height: 1.35;
+}
+
+.schedule-card h3 span {
+  display: block;
+  margin-top: 4px;
+  color: var(--sage-dark);
+  font-family:
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
+    system-ui,
+    sans-serif;
+  font-size: 0.92rem;
+}
+
+.schedule-card ol {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schedule-card li {
+  display: grid;
+  gap: 4px;
+  padding-left: 18px;
+  border-left: 2px solid #d9e8c6;
+}
+
+.schedule-card time {
+  color: var(--wood);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.schedule-card li span {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.guide-section {
+  background: var(--white);
+}
+
+.guide-section__inner {
+  display: grid;
+  gap: 28px;
+}
+
+.guide-section h2 {
+  margin: 5px 0 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.75rem, 7.2vw, 3rem);
+  line-height: 1.36;
+}
+
+.guide-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.guide-list div {
+  display: grid;
+  gap: 4px;
+  padding: 18px 20px;
+  border: 1px solid rgba(158, 111, 69, 0.12);
+  border-radius: 8px;
+  background: #fbfff8;
+}
+
+.guide-list dt {
+  color: var(--sage-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.guide-list dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.gallery-section {
+  background: linear-gradient(180deg, #fbfff8, #f3eadc);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.gallery-card {
+  margin: 0;
+}
+
+.gallery-card figcaption {
+  padding: 14px 14px 16px;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-callout {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 253, 248, 0.28);
+  border-radius: 999px;
+  color: var(--white);
+  font-weight: 800;
+  background: rgba(255, 253, 248, 0.12);
+}
+
+.staff-section,
+.price-section,
+.care-manager-section,
+.trial-section,
+.instagram-section {
+  padding: 66px 20px 84px;
+}
+
+.staff-section {
+  background: var(--white);
+}
+
+.staff-grid,
+.care-manager-section__inner,
+.price-section__inner,
+.trial-section__inner {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+}
+
+.staff-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.staff-card {
+  position: relative;
+  padding: 28px 22px 26px;
+}
+
+.staff-card::before {
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.52), transparent 58%),
+    #e5f0dc;
+}
+
+.staff-card h3 {
+  margin: 0 0 10px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.28rem;
+}
+
+.staff-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.price-section {
+  background: linear-gradient(180deg, #fbfff8, #f3eadc);
+}
+
+.care-manager-section {
+  background: var(--white);
+}
+
+.care-manager-section__inner {
+  padding: 30px 24px;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.92), rgba(248, 251, 242, 0.92)),
+    var(--white);
+  box-shadow: var(--shadow);
+}
+
+.price-section__inner {
+  display: grid;
+  gap: 28px;
+}
+
+.price-section h2,
+.care-manager-section h2,
+.trial-section h2 {
+  margin: 5px 0 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.75rem, 7.2vw, 3rem);
+  line-height: 1.36;
+}
+
+.price-section p,
+.care-manager-section p,
+.trial-section p {
+  color: var(--muted);
+}
+
+.price-panel {
+  display: grid;
+  gap: 14px;
+  padding: 26px 22px;
+  border: 1px solid rgba(158, 111, 69, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.price-panel__block {
+  padding: 18px 18px;
+  border-radius: 8px;
+  background: #fbfff8;
+}
+
+.price-panel h3 {
+  margin: 0 0 8px;
+  color: var(--sage-dark);
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+}
+
+.price-panel p {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.price-panel__drink::before {
+  content: "☕ ";
+}
+
+.price-note {
+  font-size: 0.88rem;
+}
+
+.trial-section {
+  color: var(--white);
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(83, 102, 79, 0.94), rgba(124, 138, 106, 0.9)),
+    var(--sage-dark);
+}
+
+.trial-section .section-heading__sub,
+.trial-section h2,
+.trial-section p {
+  color: var(--white);
+}
+
+.trial-section p {
+  margin: 14px 0 18px;
+  color: rgba(255, 253, 248, 0.84);
+}
+
+.trial-phone {
+  display: block;
+  margin: 0 0 18px;
+  color: var(--white);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(2rem, 10vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.trial-button {
+  margin-top: 0;
+}
+
+.trial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.instagram-section {
+  background: linear-gradient(180deg, #fbfff8, var(--white));
+}
+
+.instagram-card {
+  display: grid;
+  gap: 16px;
+  width: min(100%, 1040px);
+  margin-inline: auto;
+  padding: 28px 24px;
+  border: 1px solid rgba(117, 133, 111, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.96), rgba(237, 244, 223, 0.62)),
+    var(--white);
+  box-shadow: var(--shadow);
+}
+
+.instagram-card h2 {
+  margin: 0 0 12px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.55rem, 6vw, 2.35rem);
+  line-height: 1.38;
+}
+
+.instagram-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.instagram-account {
+  margin-top: 10px !important;
+  color: var(--sage-dark) !important;
+  font-weight: 800;
+}
+
+.instagram-card .button {
+  justify-content: center;
+}
+
+.instagram-note {
+  font-size: 0.88rem;
+}
+
+.contact-catch {
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.map-panel {
+  padding: 26px 24px;
+  border: 1px solid rgba(255, 253, 248, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.94);
+  box-shadow: 0 22px 54px rgba(52, 44, 37, 0.16);
+}
+
+.map-panel__label {
+  margin: 0 0 4px;
+  color: var(--wood);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.map-panel h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.4rem;
+}
+
+.map-panel p {
+  color: var(--muted);
+}
+
+.map-embed {
+  display: grid;
+  min-height: 220px;
+  margin-top: 18px;
+  border: 1px dashed rgba(83, 102, 79, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--sage-dark);
+  font-weight: 700;
+  background: #fbfff8;
+}
+
+.map-embed iframe {
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+}
+
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 14px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  color: var(--white);
+  font-weight: 800;
+  background: var(--sage-dark);
+  box-shadow: 0 12px 24px rgba(83, 102, 79, 0.18);
+}
+
+@media (min-width: 760px) {
+  .riru-feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .activity-section,
+  .schedule-section,
+  .guide-section,
+  .gallery-section,
+  .staff-section,
+  .price-section,
+  .care-manager-section,
+  .trial-section,
+  .instagram-section {
+    padding: 88px 48px 108px;
+  }
+
+  .instagram-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 32px 34px;
+  }
+
+  .instagram-note {
+    grid-column: 1 / -1;
+  }
+
+  .activity-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .schedule-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .schedule-card {
+    padding: 34px 30px;
+  }
+
+  .guide-section__inner {
+    grid-template-columns: 0.62fr 1.38fr;
+    align-items: start;
+  }
+
+  .guide-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .staff-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .staff-card {
+    padding: 30px 20px 28px;
+  }
+
+  .price-section__inner {
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+  }
+
+  .price-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 32px;
+  }
+
+  .price-note {
+    grid-column: 1 / -1;
+  }
+
+  .map-panel {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-page h2 {
+    font-size: clamp(1.5rem, 6.4vw, 1.75rem);
+    line-height: 1.45;
+  }
+}

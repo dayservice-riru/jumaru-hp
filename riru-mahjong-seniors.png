@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">麻雀を楽しむ高齢者のイラスト</title>
+  <desc id="desc">明るい雰囲気で麻雀を楽しむ高齢者を描いたやわらかな線画イラスト。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#edf4df"/>
+    </linearGradient>
+    <linearGradient id="table" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#9fbd83"/>
+      <stop offset="1" stop-color="#6f9164"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="38" fill="url(#bg)"/>
+  <circle cx="112" cy="84" r="46" fill="#f7e7da"/>
+  <circle cx="544" cy="330" r="74" fill="#e1ecd4"/>
+  <circle cx="530" cy="86" r="22" fill="#f6d9d0"/>
+  <path d="M520 84c10-20 36-8 21 14-8 12-22 20-22 20s-10-14-12-27c-2-11 7-16 13-7Z" fill="#f3b7ad" opacity=".86"/>
+  <path d="M565 112c8-17 30-6 18 12-7 10-19 17-19 17s-9-12-10-23c-1-9 7-13 11-6Z" fill="#f6c8bb" opacity=".9"/>
+
+  <ellipse cx="320" cy="300" rx="214" ry="58" fill="#d4b78f" opacity=".55"/>
+  <path d="M130 230c0-28 24-50 54-50h272c30 0 54 22 54 50v88c0 28-24 50-54 50H184c-30 0-54-22-54-50v-88Z" fill="url(#table)" stroke="#6e8a62" stroke-width="6"/>
+  <path d="M166 222h308M166 344h308" stroke="#fffdf8" stroke-width="4" opacity=".38"/>
+
+  <g fill="#fffdf8" stroke="#7d6c5b" stroke-width="3">
+    <rect x="226" y="196" width="34" height="48" rx="6"/>
+    <rect x="264" y="196" width="34" height="48" rx="6"/>
+    <rect x="302" y="196" width="34" height="48" rx="6"/>
+    <rect x="340" y="196" width="34" height="48" rx="6"/>
+    <rect x="378" y="196" width="34" height="48" rx="6"/>
+    <rect x="214" y="302" width="34" height="48" rx="6"/>
+    <rect x="252" y="302" width="34" height="48" rx="6"/>
+    <rect x="290" y="302" width="34" height="48" rx="6"/>
+    <rect x="328" y="302" width="34" height="48" rx="6"/>
+    <rect x="366" y="302" width="34" height="48" rx="6"/>
+  </g>
+  <g stroke="#6f9164" stroke-width="3" stroke-linecap="round">
+    <path d="M235 216h16M234 228h16M273 215v18M272 232c7 4 12 2 16-4M314 214h12M314 225h12M314 236h12M350 214c8 8 8 16 0 24M389 214h13M389 225h13M389 236h13"/>
+    <path d="M224 322h14M224 334h14M260 322c8 8 8 16 0 24M304 322h12M304 334h12M304 346h12M338 322v20M338 342c7 4 13 1 16-4M376 322h14M376 334h14"/>
+  </g>
+
+  <g>
+    <circle cx="178" cy="136" r="35" fill="#f4d6c6" stroke="#8b6e5a" stroke-width="5"/>
+    <path d="M140 174c12-28 62-30 78 0l24 58c6 15-3 31-19 35l-60 14c-19 4-36-11-34-30l5-52c1-9 3-18 6-25Z" fill="#f7eee4" stroke="#8b6e5a" stroke-width="5"/>
+    <path d="M138 128c8-38 54-48 78-20-18-4-38 0-55 12-7 5-15 8-23 8Z" fill="#d7c1ac"/>
+    <path d="M152 202c28 10 49 25 68 46" fill="none" stroke="#9e6f45" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="166" cy="138" r="3" fill="#6d4a32"/>
+    <path d="M180 154c8 5 18 4 25-2" fill="none" stroke="#6d4a32" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="464" cy="138" r="35" fill="#f4d6c6" stroke="#8b6e5a" stroke-width="5"/>
+    <path d="M424 176c15-30 67-29 82 3l22 48c8 17-3 36-21 39l-64 11c-18 3-34-12-32-30l6-50c1-8 3-15 7-21Z" fill="#f5f0df" stroke="#8b6e5a" stroke-width="5"/>
+    <path d="M435 124c20-30 67-20 76 14-20-9-44-8-63 2-5 3-9 1-13-16Z" fill="#d2b89c"/>
+    <path d="M494 203c-31 10-55 28-72 51" fill="none" stroke="#75856f" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="453" cy="140" r="3" fill="#6d4a32"/>
+    <path d="M463 156c8 5 18 4 25-2" fill="none" stroke="#6d4a32" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
